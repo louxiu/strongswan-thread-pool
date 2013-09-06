@@ -113,10 +113,9 @@ static void process_jobs(private_processor_t *this)
 {
 	/* worker threads are not cancellable by default */
 	thread_cancelability(FALSE);
-
 	/* DBG2(DBG_JOB, "started worker thread, ID: %u", thread_current_id()); */
-
 	this->mutex->lock(this->mutex);
+	
 	while (this->desired_threads >= this->total_threads)
 	{
 		job_t *job;
