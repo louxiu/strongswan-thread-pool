@@ -103,7 +103,6 @@ struct private_condvar_t {
 static void lock(private_mutex_t *this)
 {
 	int err;
-
 	profiler_start(&this->profile);
 	err = pthread_mutex_lock(&this->mutex);
 	if (err)
