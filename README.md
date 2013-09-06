@@ -7,9 +7,12 @@ This nice thread pool is stripped from strongswan 4.5.0.
 The cancel of job is well supported.
 There are child jobs
 The scheduler is a callback job
-
+The number of threads can be adjusted dynamically
+Human readable thread ID
 
 Other:
 1. Implementation of the rwlock_t interface uses mutex_t and condvar_t primitives
 2. leak detect module
 3. simple lex parser interface
+4. a mutex profiler
+5. backtrace module
